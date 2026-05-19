@@ -35,10 +35,9 @@ These files are useful for tracking model performance and analyzing training str
 
 ## External Resources
 
-- **Model Weights**: [Google Drive Folder](https://drive.google.com/drive/folders/1Ex-VJU2JZhVH5xDOLeAC9zpanTRjwBAz?usp=sharing)
-	- Note: use model files with the `best` label when available.
+- **Model Weights**: [HugginFace](https://huggingface.co/ditt-a/3D_UnetPlusPlus_Brain_Tumour_Segmentation)
 - **Dataset**: [BRATS20 Training and Validation Dataset (Kaggle)](https://www.kaggle.com/datasets/awsaf49/brats20-dataset-training-validation)
-- **Documentation**: [Project Documentation (Google Docs)](https://docs.google.com/document/d/16BIlUN7SLs_-bPmNUNn9Qt092HVJ4UgH8-pk1ObLxmg/edit?usp=sharing)
+- **Documentation (In Indonesia)**: [Project Documentation (Google Docs)](https://docs.google.com/document/d/1iAkgFkUGjsJR2xT7ZMA4Fa-2kk25uirJvzk7JTM10Tc/edit?usp=sharing)
 
 ## Quick Start
 
