@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f7f6" />
+    <meta
+      name="description"
+      content="Jelajahi MRI otak, bandingkan modalitas, dan tinjau anotasi referensi dalam satu ruang visual."
+    />
+    <title>Brain Tumour — Lihat citra. Pahami lapisannya.</title>
+  </head>
+  <body>
+    <a class="skip" href="#main">Lewati ke konten</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="Brain Tumour — beranda"
+          ><span class="brand-mark" aria-hidden="true"></span
+          ><span>Brain Tumour<small>SEGMENTATION</small></span></a
+        >
+        <button
+          class="menu-toggle"
+          aria-label="Buka navigasi"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span><span></span>
+        </button>
+        <nav id="main-nav" aria-label="Navigasi utama">
+          <a href="#tentang">Tentang</a><a href="#modalitas">Eksplorasi MRI</a
+          ><a href="#referensi">Anotasi</a><a href="#faq">FAQ</a>
+        </nav>
+        <a class="button button-small header-cta" href="./simulasi.html"
+          >Buka simulasi <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow hero-enter">PERSPEKTIF BARU PADA CITRA OTAK</p>
+          <h1 class="hero-enter">
+            Lihat citranya.<br />Pahami setiap<br /><em>lapisannya.</em>
+          </h1>
+          <p class="hero-description hero-enter">
+            Jelajahi MRI otak dari empat modalitas dan tinjau area anotasi dalam
+            satu ruang visual yang terarah.
+          </p>
+          <div class="hero-actions hero-enter">
+            <a class="button" href="./simulasi.html"
+              >Jelajahi simulasi <span aria-hidden="true">↗</span></a
+            ><a class="text-link" href="#modalitas"
+              >Lihat contoh MRI <span aria-hidden="true">↓</span></a
+            >
+          </div>
+          <div class="hero-facts hero-enter">
+            <span><b>04</b> Modalitas MRI</span><i></i
+            ><span><b>03</b> Area anotasi</span>
+          </div>
+        </div>
+        <div class="hero-visual hero-enter">
+          <div class="brain-halo" aria-hidden="true"></div>
+          <div
+            id="brain-view"
+            class="brain-view"
+            role="img"
+            aria-label="Objek tiga dimensi permukaan otak yang dapat diputar. Gunakan tombol untuk menjeda animasi."
+          >
+            <img
+              class="brain-fallback"
+              data-asset="editorial/01-brain-sculpture"
+              width="1254"
+              height="1254"
+              alt=""
+            />
+          </div>
+          <span class="brain-label"><i></i> PERSPEKTIF 3D</span>
+          <div class="brain-caption">
+            <span
+              >Permukaan otak dari MRI<br /><small
+                >Geser untuk melihat sisi lainnya</small
+              ></span
+            ><button
+              id="brain-pause"
+              class="subtle-button"
+              aria-label="Jeda putaran otak"
+              aria-pressed="false"
+            >
+              Ⅱ <span>Jeda animasi</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <div class="modality-strip">
+        <div class="container">
+          <span>EMPAT MODALITAS.<br /><b>SATU RUANG PENINJAUAN.</b></span
+          ><span>T1</span><span>T1ce</span><span>T2</span><span>FLAIR</span
+          ><a href="./simulasi.html"
+            >Kenali perbedaannya <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </div>
+      <section class="container section intro-grid" id="tentang">
+        <div class="intro-image reveal">
+          <img
+            data-asset="editorial/02-mri-room"
+            alt="Ilustrasi ruang MRI dengan pencahayaan tenang"
+            width="1536"
+            height="1024"
+            loading="lazy"
+          /><span class="image-note">PENCITRAAN / RESONANSI MAGNETIK</span>
+        </div>
+        <div class="intro-copy reveal">
+          <p class="eyebrow">01 / MELIHAT LEBIH UTUH</p>
+          <h2>Setiap citra punya<br /><em>detail untuk ditinjau.</em></h2>
+          <p>
+            Modalitas MRI menampilkan citra yang berbeda dari pemeriksaan yang
+            sama. Melihatnya berdampingan membantu Anda menjelajahi detail tanpa
+            kehilangan konteks.
+          </p>
+          <div class="lined-point">
+            <span>01</span>
+            <p>Berpindah antar-modalitas pada irisan yang sama.</p>
+          </div>
+          <div class="lined-point">
+            <span>02</span>
+            <p>Bandingkan citra dengan anotasi referensinya.</p>
+          </div>
+          <a class="text-link" href="./simulasi.html"
+            >Masuk ke ruang simulasi <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section class="modalities-section section" id="modalitas">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">02 / EKSPLORASI CITRA</p>
+              <h2>
+                Empat modalitas.<br /><em>Detail yang saling melengkapi.</em>
+              </h2>
+            </div>
+            <p>
+              Pilih modalitas untuk melihat citra asli pada irisan yang sama.
+              Semua contoh berasal dari satu kasus dataset.
+            </p>
+          </div>
+          <div class="modality-explorer reveal">
+            <div
+              class="modality-list"
+              role="tablist"
+              aria-label="Modalitas contoh MRI"
+              aria-orientation="vertical"
+            >
+              <button
+                role="tab"
+                aria-selected="true"
+                aria-controls="modality-panel"
+                id="tab-flair"
+                data-modality="flair"
+              >
+                <span>01</span>
+                <div>
+                  <b>FLAIR</b><small>Fluid-attenuated inversion recovery</small>
+                </div>
+                <i aria-hidden="true">↗</i>
+              </button>
+              <button
+                role="tab"
+                aria-selected="false"
+                aria-controls="modality-panel"
+                id="tab-t1"
+                data-modality="t1"
+                tabindex="-1"
+              >
+                <span>02</span>
+                <div><b>T1</b><small>T1-weighted imaging</small></div>
+                <i aria-hidden="true">↗</i>
+              </button>
+              <button
+                role="tab"
+                aria-selected="false"
+                aria-controls="modality-panel"
+                id="tab-t1ce"
+                data-modality="t1ce"
+                tabindex="-1"
+              >
+                <span>03</span>
+                <div><b>T1ce</b><small>Contrast-enhanced T1</small></div>
+                <i aria-hidden="true">↗</i>
+              </button>
+              <button
+                role="tab"
+                aria-selected="false"
+                aria-controls="modality-panel"
+                id="tab-t2"
+                data-modality="t2"
+                tabindex="-1"
+              >
+                <span>04</span>
+                <div><b>T2</b><small>T2-weighted imaging</small></div>
+                <i aria-hidden="true">↗</i>
+              </button>
+            </div>
+            <div
+              class="modality-panel"
+              role="tabpanel"
+              id="modality-panel"
+              aria-labelledby="tab-flair"
+            >
+              <div class="scan-top">
+                <span>SAMPEL MRI ASLI</span
+                ><span id="modality-name">FLAIR / AXIAL</span>
+              </div>
+              <img
+                id="modality-image"
+                data-asset="dataset/axial-flair"
+                alt="MRI FLAIR pada irisan axial 67"
+                width="240"
+                height="240"
+                loading="lazy"
+              />
+              <div class="scan-bottom">
+                <span>FeTS21_Training_001</span
+                ><span>SLICE 67 / 240 × 240</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container section" id="referensi">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">03 / LAPISAN REFERENSI</p>
+            <h2>Dari citra,<br /><em>ke area yang ditandai.</em></h2>
+          </div>
+          <p>
+            Bandingkan MRI dengan anotasi dataset. Geser pembatas untuk melihat
+            area referensi dalam konteks citra aslinya.
+          </p>
+        </div>
+        <div class="reference-grid">
+          <div class="comparison reveal">
+            <img
+              data-asset="dataset/axial-flair"
+              alt="MRI FLAIR tanpa overlay"
+              width="240"
+              height="240"
+              loading="lazy"
+            />
+            <div class="comparison-overlay" id="comparison-overlay">
+              <img
+                data-asset="dataset/axial-flair-reference-overlay"
+                alt="MRI FLAIR dengan anotasi referensi dataset"
+                width="240"
+                height="240"
+                loading="lazy"
+              />
+            </div>
+            <span class="comparison-label left">MRI ASLI</span
+            ><span class="comparison-label right">ANOTASI REFERENSI</span>
+            <div
+              class="comparison-line"
+              id="comparison-line"
+              aria-hidden="true"
+            >
+              <span>↔</span>
+            </div>
+            <input
+              type="range"
+              id="comparison-range"
+              aria-label="Posisi pembatas perbandingan anotasi"
+              min="0"
+              max="100"
+              value="50"
+            />
+          </div>
+          <div class="reference-copy reveal">
+            <span class="tag">ANOTASI DATASET</span>
+            <h3>Tiga area.<br />Satu tampilan yang terhubung.</h3>
+            <p>
+              Aktifkan lapisan secara terpisah dan atur intensitas warnanya di
+              ruang simulasi.
+            </p>
+            <ul class="region-legend">
+              <li>
+                <i class="dot et"></i>
+                <div><b>ET</b><span>Enhancing tumor</span></div>
+              </li>
+              <li>
+                <i class="dot tc"></i>
+                <div><b>TC</b><span>Tumor core</span></div>
+              </li>
+              <li>
+                <i class="dot wt"></i>
+                <div><b>WT</b><span>Whole tumor</span></div>
+              </li>
+            </ul>
+            <a class="text-link" href="./simulasi.html"
+              >Coba kontrol lapisan <span aria-hidden="true">↗</span></a
+            >
+            <p class="fine-print">
+              Overlay menampilkan anotasi referensi dari dataset. Model
+              segmentasi belum dimuat.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="review-section">
+        <div class="container review-grid">
+          <div class="review-copy reveal">
+            <p class="eyebrow">RUANG UNTUK MENINJAU</p>
+            <h2>Detail tetap terlihat.<br /><em>Konteks tetap dekat.</em></h2>
+            <p>
+              Ruang simulasi menyatukan citra, pilihan modalitas, dan kontrol
+              anotasi dalam satu tampilan. Mulai dari contoh yang sudah
+              tersedia, lalu telusuri lapisannya.
+            </p>
+            <a class="button" href="./simulasi.html"
+              >Buka ruang simulasi <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="review-image reveal">
+            <img
+              data-asset="editorial/04-case-review"
+              alt="Ilustrasi dua tenaga medis meninjau citra bersama"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="container section faq-grid" id="faq">
+        <div class="reveal">
+          <p class="eyebrow">SEBELUM ANDA MENCOBA</p>
+          <h2>Hal yang perlu<br /><em>Anda ketahui.</em></h2>
+        </div>
+        <div class="faq-list reveal">
+          <details open>
+            <summary>Apakah model segmentasi sudah aktif?</summary>
+            <p>
+              Model belum dimuat. Ruang simulasi menggunakan citra asli dan
+              anotasi referensi dataset untuk memperlihatkan alur peninjauan.
+            </p>
+          </details>
+          <details>
+            <summary>Dari mana citra MRI ini berasal?</summary>
+            <p>
+              Contoh berasal dari kasus FeTS21_Training_001 yang tersedia di
+              repository, lengkap dengan empat modalitas MRI dan mask referensi.
+            </p>
+          </details>
+          <details>
+            <summary>Apakah saya perlu mengunggah gambar?</summary>
+            <p>
+              Tidak. Preview ini menyediakan contoh internal yang dapat langsung
+              dipilih. Tidak ada unggahan gambar atau data pribadi.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer class="shared-footer"></footer>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

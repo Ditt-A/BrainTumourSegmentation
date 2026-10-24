@@ -1,0 +1,12 @@
+{
+  "source": "data/samples/FeTS21_Training_001/FeTS21_Training_001_t1.nii",
+  "source_sha256": "6440b711f433a7071379088fc61ad9e0ff01ae5f551a7e5f006135c5adcf0f83",
+  "output": "assets/models/brain-surface.glb",
+  "output_sha256": "6a2f12dc766a9d3b8368dd9b46ef40aa88d25d3b7e9a5152b4d6ecfd4881cf2c",
+  "vertices": 26932,
+  "triangles": 53860,
+  "bytes": 1293776,
+  "processing": "Largest nonzero connected component of skull-stripped T1; binary closing/fill holes; Gaussian sigma 0.65; marching cubes level 0.5 step 2; centered and scaled for display.",
+  "usage": "Decorative surface mesh for the landing-page hero. Not a segmentation-model prediction, tumor visualization, or clinical reconstruction.",
+  "runtime": "CPU-only scientific processing; no ML runtime or checkpoint loaded."
+}

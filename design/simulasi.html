@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f7f6" />
+    <meta
+      name="description"
+      content="Jelajahi contoh MRI otak dan anotasi referensi melalui kontrol modalitas dan lapisan."
+    />
+    <title>Ruang Simulasi — Brain Tumour</title>
+  </head>
+  <body class="simulation-page">
+    <a class="skip" href="#main">Lewati ke konten</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="Brain Tumour — beranda"
+          ><span class="brand-mark" aria-hidden="true"></span
+          ><span>Brain Tumour<small>SEGMENTATION</small></span></a
+        ><a class="back-link" href="./index.html"
+          ><span aria-hidden="true">←</span> Kembali ke beranda</a
+        >
+      </div>
+    </header>
+    <main id="main" class="simulation-main container">
+      <div class="simulation-heading">
+        <div>
+          <p class="eyebrow">RUANG SIMULASI</p>
+          <h1>Amati citranya.<br /><em>Jelajahi lapisannya.</em></h1>
+        </div>
+        <p>
+          Pilih modalitas, tampilkan anotasi, dan atur lapisan yang ingin Anda
+          tinjau.
+        </p>
+      </div>
+      <div class="model-notice" role="note">
+        <span class="notice-icon" aria-hidden="true">i</span>
+        <p>
+          <b>Model belum dimuat.</b> Tampilan ini menggunakan MRI dan anotasi
+          referensi dataset. Hasil yang terlihat bukan prediksi baru.
+        </p>
+        <span class="notice-tag">PRATINJAU REFERENSI</span>
+      </div>
+      <div class="workspace" id="simulation-workspace">
+        <aside
+          class="workspace-sidebar"
+          aria-label="Pilihan contoh dan modalitas"
+        >
+          <div class="panel-label"><span>01</span> PILIH CITRA</div>
+          <div class="sample-card">
+            <img
+              data-asset="dataset/axial-flair"
+              width="240"
+              height="240"
+              alt="Thumbnail kasus contoh MRI"
+            />
+            <div>
+              <span>KASUS CONTOH</span><b>FeTS21 · 001</b
+              ><small>Axial / slice 67</small>
+            </div>
+            <span class="sample-check" aria-label="Dipilih">✓</span>
+          </div>
+          <h2 class="control-label">Modalitas MRI</h2>
+          <div
+            class="sim-modalities"
+            role="group"
+            aria-label="Pilih modalitas MRI"
+          >
+            <button data-sim-modality="flair" aria-pressed="true">
+              <b>FLAIR</b><small>Fluid-attenuated</small
+              ><i aria-hidden="true">↗</i>
+            </button>
+            <button data-sim-modality="t1" aria-pressed="false">
+              <b>T1</b><small>T1-weighted</small><i aria-hidden="true">↗</i>
+            </button>
+            <button data-sim-modality="t1ce" aria-pressed="false">
+              <b>T1ce</b><small>Dengan kontras</small
+              ><i aria-hidden="true">↗</i>
+            </button>
+            <button data-sim-modality="t2" aria-pressed="false">
+              <b>T2</b><small>T2-weighted</small><i aria-hidden="true">↗</i>
+            </button>
+          </div>
+          <p class="sidebar-note">
+            Keempat modalitas ditampilkan pada irisan yang sama agar konteks
+            tetap selaras.
+          </p>
+          <a
+            class="source-link"
+            href="https://github.com/Ditt-A/BrainTumourSegmentation/tree/main/data/samples/FeTS21_Training_001"
+            target="_blank"
+            rel="noreferrer"
+            >Lihat sumber citra <span aria-hidden="true">↗</span></a
+          >
+        </aside>
+        <section class="viewer-panel" aria-labelledby="viewer-title">
+          <div class="viewer-toolbar">
+            <div>
+              <span class="live-dot"></span>
+              <h2 id="viewer-title">FLAIR</h2>
+              <span class="viewer-plane">AXIAL</span>
+            </div>
+            <div class="view-switch" role="group" aria-label="Tampilan anotasi">
+              <button id="view-original" aria-pressed="true">Citra asli</button
+              ><button id="view-overlay" aria-pressed="false">
+                Dengan anotasi
+              </button>
+            </div>
+          </div>
+          <div class="medical-viewer" id="medical-viewer">
+            <span class="axis-mark axis-top" aria-hidden="true">A</span
+            ><span class="axis-mark axis-bottom" aria-hidden="true">P</span
+            ><span class="axis-mark axis-left" aria-hidden="true">L</span
+            ><span class="axis-mark axis-right" aria-hidden="true">R</span>
+            <div class="scan-stack" id="scan-stack">
+              <img
+                id="sim-base"
+                data-asset="dataset/axial-flair"
+                alt="MRI FLAIR pada irisan axial 67"
+                width="240"
+                height="240"
+              /><img
+                id="layer-wt"
+                class="scan-layer"
+                data-asset="dataset/axial-reference-wt"
+                alt=""
+                width="240"
+                height="240"
+              /><img
+                id="layer-tc"
+                class="scan-layer"
+                data-asset="dataset/axial-reference-tc"
+                alt=""
+                width="240"
+                height="240"
+              /><img
+                id="layer-et"
+                class="scan-layer"
+                data-asset="dataset/axial-reference-et"
+                alt=""
+                width="240"
+                height="240"
+              />
+            </div>
+            <div class="viewer-corner">
+              <span id="viewer-mode">MRI ASLI</span><span>SLICE 67</span>
+            </div>
+            <div
+              class="zoom-controls"
+              role="group"
+              aria-label="Perbesaran citra"
+            >
+              <button id="zoom-out" aria-label="Perkecil citra" disabled>
+                −</button
+              ><span id="zoom-level">100%</span
+              ><button id="zoom-in" aria-label="Perbesar citra">+</button>
+            </div>
+          </div>
+          <div class="viewer-footer">
+            <span><i></i> FeTS21_Training_001</span
+            ><span>240 × 240 px · Neurological view</span>
+          </div>
+          <div class="viewer-actions">
+            <button class="button" id="show-reference" aria-pressed="false">
+              Tampilkan referensi <span aria-hidden="true">↗</span></button
+            ><button class="reset-button" id="reset-view">
+              <span aria-hidden="true">↺</span> Atur ulang
+            </button>
+          </div>
+        </section>
+        <aside class="layers-panel" aria-label="Kontrol anotasi">
+          <div class="panel-label"><span>02</span> LAPISAN ANOTASI</div>
+          <h2>Area referensi</h2>
+          <p class="panel-description">
+            Pilih area yang ingin ditampilkan di atas citra MRI.
+          </p>
+          <fieldset class="layer-toggles">
+            <legend class="sr-only">Area anotasi referensi</legend>
+            <label
+              ><i class="dot et"></i>
+              <div><b>ET</b><small>Enhancing tumor</small></div>
+              <input type="checkbox" data-region="et" checked /><span
+                class="toggle"
+                aria-hidden="true"
+              ></span></label
+            ><label
+              ><i class="dot tc"></i>
+              <div><b>TC</b><small>Tumor core</small></div>
+              <input type="checkbox" data-region="tc" checked /><span
+                class="toggle"
+                aria-hidden="true"
+              ></span></label
+            ><label
+              ><i class="dot wt"></i>
+              <div><b>WT</b><small>Whole tumor</small></div>
+              <input type="checkbox" data-region="wt" checked /><span
+                class="toggle"
+                aria-hidden="true"
+              ></span
+            ></label>
+          </fieldset>
+          <div class="opacity-control">
+            <label for="overlay-opacity"
+              >Intensitas lapisan
+              <output for="overlay-opacity" id="opacity-value"
+                >65%</output
+              ></label
+            ><input
+              type="range"
+              min="0"
+              max="100"
+              value="65"
+              id="overlay-opacity"
+            />
+          </div>
+          <div class="reference-information">
+            <span class="tag">SUMBER ANOTASI</span>
+            <h3>Mask referensi dataset</h3>
+            <p>
+              ET, TC, dan WT merupakan area yang saling mencakup. Kontrol ini
+              membantu Anda meninjaunya secara terpisah.
+            </p>
+            <div><span>Status model</span><b>Belum dimuat</b></div>
+            <div><span>Sumber tampilan</span><b>Data referensi</b></div>
+          </div>
+        </aside>
+      </div>
+      <p
+        class="workspace-status"
+        id="workspace-status"
+        role="status"
+        aria-live="polite"
+      >
+        Menampilkan FLAIR tanpa anotasi.
+      </p>
+      <div class="simulation-bottom">
+        <span>Contoh internal · Tidak memerlukan unggahan</span
+        ><a class="text-link" href="./index.html#referensi"
+          >Tentang lapisan anotasi <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </main>
+    <footer class="shared-footer"></footer>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
