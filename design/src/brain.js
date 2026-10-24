@@ -27,26 +27,28 @@ export async function startBrain() {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 30);
   camera.position.set(3.8, 0.9, 4.4);
-  scene.add(new THREE.HemisphereLight(0xffffff, 0x536f65, 1.25));
-  const key = new THREE.DirectionalLight(0xfff6e9, 2.5);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x574a47, 1.25));
+  const key = new THREE.DirectionalLight(0xfff3e9, 2.5);
   key.position.set(-3, 5, 5);
   scene.add(key);
-  const rim = new THREE.DirectionalLight(0x74c7c2, 1.4);
+  const rim = new THREE.DirectionalLight(0xe4d3c6, 1.4);
   rim.position.set(4, 2, -3);
   scene.add(rim);
   const fill = new THREE.DirectionalLight(0xffffff, 0.65);
   fill.position.set(0, -2, 4);
   scene.add(fill);
   const controls = new OrbitControls(camera, renderer.domElement);
+  renderer.domElement.style.touchAction = "pan-y";
   controls.enableZoom = false;
   controls.enablePan = false;
   controls.enableDamping = false;
   controls.minPolarAngle = Math.PI * 0.18;
   controls.maxPolarAngle = Math.PI * 0.82;
   const material = new THREE.MeshStandardMaterial({
-    color: 0x8fb5aa,
-    roughness: 0.48,
-    metalness: 0.08,
+    color: 0xffffff,
+    roughness: 0.7,
+    metalness: 0,
+    vertexColors: true,
   });
   let gltf;
   try {
@@ -62,6 +64,20 @@ export async function startBrain() {
   const brain = gltf.scene;
   brain.traverse((item) => {
     if (item.isMesh) {
+      const positions = item.geometry.getAttribute("position");
+      const colors = new Float32Array(positions.count * 3);
+      const base = new THREE.Color(0xc5a5a0);
+      const tone = new THREE.Color();
+      for (let i = 0; i < positions.count; i++) {
+        const x = positions.getX(i),
+          y = positions.getY(i),
+          z = positions.getZ(i);
+        const variation =
+          0.98 + 0.02 * Math.sin(x * 3 + z) * Math.sin(y * 4 - z * 2);
+        tone.copy(base).multiplyScalar(variation);
+        colors.set([tone.r, tone.g, tone.b], i * 3);
+      }
+      item.geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
       item.material = material;
       item.geometry.computeVertexNormals();
     }
@@ -85,7 +101,6 @@ export async function startBrain() {
     draw();
   };
   const updateButton = () => {
-    button.setAttribute("aria-pressed", String(!running));
     button.setAttribute(
       "aria-label",
       running ? "Jeda putaran otak" : "Putar otak",
@@ -116,6 +131,24 @@ export async function startBrain() {
     running = !running;
     updateButton();
     schedule();
+  });
+  host.addEventListener("keydown", (event) => {
+    if (
+      event.target !== host ||
+      !["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(event.key)
+    )
+      return;
+    event.preventDefault();
+    running = false;
+    if (event.key === "ArrowLeft") brain.rotation.y -= Math.PI / 12;
+    if (event.key === "ArrowRight") brain.rotation.y += Math.PI / 12;
+    if (event.key === "ArrowUp")
+      brain.rotation.x = Math.max(-0.6, brain.rotation.x - 0.12);
+    if (event.key === "ArrowDown")
+      brain.rotation.x = Math.min(0.6, brain.rotation.x + 0.12);
+    updateButton();
+    schedule();
+    draw();
   });
   controls.addEventListener("change", draw);
   let wasRunning = false;

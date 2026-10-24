@@ -29,23 +29,32 @@ const nav = document.querySelector("#main-nav");
 if (menu) {
   const closeMenu = () => {
     menu.setAttribute("aria-expanded", "false");
+    menu.setAttribute("aria-label", "Buka navigasi");
     nav.classList.remove("open");
   };
   menu.addEventListener("click", () => {
     const open = menu.getAttribute("aria-expanded") !== "true";
     menu.setAttribute("aria-expanded", String(open));
+    menu.setAttribute("aria-label", open ? "Tutup navigasi" : "Buka navigasi");
     nav.classList.toggle("open", open);
   });
   nav
     .querySelectorAll("a")
     .forEach((a) => a.addEventListener("click", closeMenu));
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
+    if (e.key === "Escape" && menu.getAttribute("aria-expanded") === "true") {
       closeMenu();
       menu.focus();
     }
   });
-  matchMedia("(min-width: 901px)").addEventListener("change", closeMenu);
+  document.addEventListener("pointerdown", (event) => {
+    if (
+      menu.getAttribute("aria-expanded") === "true" &&
+      !event.target.closest(".site-header")
+    )
+      closeMenu();
+  });
+  matchMedia("(min-width: 1001px)").addEventListener("change", closeMenu);
 }
 const reduced = matchMedia("(prefers-reduced-motion: reduce)");
 if (!reduced.matches) {
