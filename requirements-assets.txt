@@ -1,0 +1,4 @@
+# CPU-only image export; no PyTorch, MONAI, model download, or GPU required.
+nibabel==5.4.2
+numpy==2.5.4
+Pillow==12.3.0

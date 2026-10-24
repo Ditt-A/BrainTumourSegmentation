@@ -1,0 +1,314 @@
+{
+  "source_commit": "6a8b6e9a701926256e670feee97f8ec988feef4f",
+  "processing": "Decoded original embedded PNG outputs without modification; no notebook cells executed.",
+  "figures": [
+    {
+      "file": "intern_unet-cell-15-output-00.png",
+      "notebook": "intern_unet.ipynb",
+      "cell_index": 15,
+      "output_index": 0,
+      "sha256": "4a1d204866c320cf180c5cf8112de401346270ac764d1efc6804844d548a2ae7"
+    },
+    {
+      "file": "intern_unet-cell-15-output-01.png",
+      "notebook": "intern_unet.ipynb",
+      "cell_index": 15,
+      "output_index": 1,
+      "sha256": "a485d36c80f3162fe5d39651ecf3b56a8ebadcc526e8f8f758b114e72005642a"
+    },
+    {
+      "file": "intern_unet-cell-15-output-02.png",
+      "notebook": "intern_unet.ipynb",
+      "cell_index": 15,
+      "output_index": 2,
+      "sha256": "bf7c5d18b96b070772a36258985e35e907a6f300f38b4e6c343741c73fdc4b7e"
+    },
+    {
+      "file": "intern_unet-cell-31-output-00.png",
+      "notebook": "intern_unet.ipynb",
+      "cell_index": 31,
+      "output_index": 0,
+      "sha256": "3e1aecdacfa6965e45a8c770cc5232bdd0e0b069d52dff62aa6c7ca56baa48b2"
+    },
+    {
+      "file": "intern_unet-cell-31-output-01.png",
+      "notebook": "intern_unet.ipynb",
+      "cell_index": 31,
+      "output_index": 1,
+      "sha256": "3ece66f37c19f93f90a49840d7492fb9ea05826c47518dd55e7a54d80fd7b6f8"
+    },
+    {
+      "file": "intern_unet-cell-31-output-02.png",
+      "notebook": "intern_unet.ipynb",
+      "cell_index": 31,
+      "output_index": 2,
+      "sha256": "78e2df3ec956bd2f093ee410e0eb529dfe7bc241309917afcefd75ee3100eaeb"
+    },
+    {
+      "file": "intern_unet-cell-47-output-00.png",
+      "notebook": "intern_unet.ipynb",
+      "cell_index": 47,
+      "output_index": 0,
+      "sha256": "0d1fa105ffe138befae2d6dfcc924a6cf4141850544cd3a882d5fb0b81aa1315"
+    },
+    {
+      "file": "intern_unet-cell-47-output-01.png",
+      "notebook": "intern_unet.ipynb",
+      "cell_index": 47,
+      "output_index": 1,
+      "sha256": "888646884a3d4254818207cb10c1293e0898c01e039ccbd9916dd0738bc7a062"
+    },
+    {
+      "file": "intern_unet-cell-47-output-02.png",
+      "notebook": "intern_unet.ipynb",
+      "cell_index": 47,
+      "output_index": 2,
+      "sha256": "032fa6d984c0439c2c3f1b41b557343ffb2985cd821e9f1111ca4776d1f50a99"
+    },
+    {
+      "file": "intern_unet-cell-53-output-01.png",
+      "notebook": "intern_unet.ipynb",
+      "cell_index": 53,
+      "output_index": 1,
+      "sha256": "5ee3cc45e01901b69ab533b3c845869eeb5bc28abde775009432c4c8551e5dce"
+    },
+    {
+      "file": "intern_unet-cell-53-output-02.png",
+      "notebook": "intern_unet.ipynb",
+      "cell_index": 53,
+      "output_index": 2,
+      "sha256": "746ec7c87dcdafeb60bc6c55ac9a8b2bb959d6c2a2e7b9ca06b03fa5e643f41e"
+    },
+    {
+      "file": "intern_unetpp-cell-16-output-00.png",
+      "notebook": "intern_unetpp.ipynb",
+      "cell_index": 16,
+      "output_index": 0,
+      "sha256": "88c8bdd5a63e00b7bcd68b8cc3087c1a1c08911ea1745ec57c4669e6a669fceb"
+    },
+    {
+      "file": "intern_unetpp-cell-16-output-01.png",
+      "notebook": "intern_unetpp.ipynb",
+      "cell_index": 16,
+      "output_index": 1,
+      "sha256": "89353d0c4044ae6d7210712cd6baf958bff4b0d302323cf31878ece9fec90378"
+    },
+    {
+      "file": "intern_unetpp-cell-16-output-02.png",
+      "notebook": "intern_unetpp.ipynb",
+      "cell_index": 16,
+      "output_index": 2,
+      "sha256": "792315d922fbceb9c9068d680ec3245628bf82238b5725c24cb32560954caffc"
+    },
+    {
+      "file": "intern_unetpp-cell-32-output-00.png",
+      "notebook": "intern_unetpp.ipynb",
+      "cell_index": 32,
+      "output_index": 0,
+      "sha256": "76effc936535fcc7d0181516a60e914899a3a7679e7cc459c69f6b4b40e3599e"
+    },
+    {
+      "file": "intern_unetpp-cell-32-output-01.png",
+      "notebook": "intern_unetpp.ipynb",
+      "cell_index": 32,
+      "output_index": 1,
+      "sha256": "7a8580973d7ab67f87b6971f5d647df487cfa09cd30370fd6273b7c503db3d7f"
+    },
+    {
+      "file": "intern_unetpp-cell-32-output-02.png",
+      "notebook": "intern_unetpp.ipynb",
+      "cell_index": 32,
+      "output_index": 2,
+      "sha256": "d2f72c6969c9efe7014c2fe10af691e12ee45b517a3b979bd786a6b556a8543d"
+    },
+    {
+      "file": "intern_unetpp-cell-48-output-00.png",
+      "notebook": "intern_unetpp.ipynb",
+      "cell_index": 48,
+      "output_index": 0,
+      "sha256": "9207a170232134d0ee8a09562c0caa20451f8ed7d0bcae43af6f1c9e87a8cfef"
+    },
+    {
+      "file": "intern_unetpp-cell-48-output-01.png",
+      "notebook": "intern_unetpp.ipynb",
+      "cell_index": 48,
+      "output_index": 1,
+      "sha256": "f099290c639c46c6b37538bf02239122d1fd9407ac39ca5fe8f4666d6b91762c"
+    },
+    {
+      "file": "intern_unetpp-cell-48-output-02.png",
+      "notebook": "intern_unetpp.ipynb",
+      "cell_index": 48,
+      "output_index": 2,
+      "sha256": "ce39f8d6b1e122e2d432fc9de5ca461e5faaec3a17d32a22bb5c0d0d2d19baaf"
+    },
+    {
+      "file": "prediksi-cell-08-output-02.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 8,
+      "output_index": 2,
+      "sha256": "5a6d407fd4d4b1f8abf66016e4922a35a314daab323366db4c974a4554485833"
+    },
+    {
+      "file": "prediksi-cell-08-output-03.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 8,
+      "output_index": 3,
+      "sha256": "ceca8cc57a568e6e31178a75f97cdb3859ed088a9448ff98bae8fa4e203cedb0"
+    },
+    {
+      "file": "prediksi-cell-08-output-04.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 8,
+      "output_index": 4,
+      "sha256": "9d4dae602f7b980f61799f292e965bfb108614a68ab5444561d44a6cb1fda292"
+    },
+    {
+      "file": "prediksi-cell-08-output-05.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 8,
+      "output_index": 5,
+      "sha256": "d81bf2ead57ebd943739bd6d5af531f45bcfa75d6a1f63b1ae81ecf1b7c4a52c"
+    },
+    {
+      "file": "prediksi-cell-10-output-02.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 10,
+      "output_index": 2,
+      "sha256": "ef4e03b50cee56b7f4eaaa7b045f51ae574580814f3e044cfb90f0e1df9b4d3b"
+    },
+    {
+      "file": "prediksi-cell-10-output-03.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 10,
+      "output_index": 3,
+      "sha256": "ceca8cc57a568e6e31178a75f97cdb3859ed088a9448ff98bae8fa4e203cedb0"
+    },
+    {
+      "file": "prediksi-cell-10-output-04.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 10,
+      "output_index": 4,
+      "sha256": "f602a81d14b4c15de0ffe2c8978a6a048432e591aefe272c795147400d6a604d"
+    },
+    {
+      "file": "prediksi-cell-10-output-05.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 10,
+      "output_index": 5,
+      "sha256": "5fd33e60102d35211df8c2dd61fdf605cc3d7d4b8e7a16f21b1d520f7394be4d"
+    },
+    {
+      "file": "prediksi-cell-12-output-02.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 12,
+      "output_index": 2,
+      "sha256": "08e2c8c93a0f31ae54640062fb1f381bb019852daff5d7a51098d0f3a574918e"
+    },
+    {
+      "file": "prediksi-cell-12-output-03.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 12,
+      "output_index": 3,
+      "sha256": "ceca8cc57a568e6e31178a75f97cdb3859ed088a9448ff98bae8fa4e203cedb0"
+    },
+    {
+      "file": "prediksi-cell-12-output-04.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 12,
+      "output_index": 4,
+      "sha256": "036ce60dc10f9448b055b158bcc24533426049ff2c14c60aaeaf5ac9ba01c179"
+    },
+    {
+      "file": "prediksi-cell-12-output-05.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 12,
+      "output_index": 5,
+      "sha256": "78a49c440db4dd9862b23b2394a1e230102765fa03436058cb33f862acb19b2f"
+    },
+    {
+      "file": "prediksi-cell-14-output-02.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 14,
+      "output_index": 2,
+      "sha256": "e2f7d956dacae970e0b19e6d7a6bc73ebf41d2fa7d09b900994c3f943c90c532"
+    },
+    {
+      "file": "prediksi-cell-14-output-03.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 14,
+      "output_index": 3,
+      "sha256": "ceca8cc57a568e6e31178a75f97cdb3859ed088a9448ff98bae8fa4e203cedb0"
+    },
+    {
+      "file": "prediksi-cell-14-output-04.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 14,
+      "output_index": 4,
+      "sha256": "be9783f153348a546c4f526f79adf420a36f01010bc074caef403e212001c33d"
+    },
+    {
+      "file": "prediksi-cell-14-output-05.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 14,
+      "output_index": 5,
+      "sha256": "bcec0db7c77d79e0cf60c6aed4e8095b3811d9f61315483e5b6ddb628b928a0e"
+    },
+    {
+      "file": "prediksi-cell-16-output-02.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 16,
+      "output_index": 2,
+      "sha256": "2938ca390ec7ba699d59df351ec9ec96a0a95b12da99e0202d17e61a989482f7"
+    },
+    {
+      "file": "prediksi-cell-16-output-03.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 16,
+      "output_index": 3,
+      "sha256": "ceca8cc57a568e6e31178a75f97cdb3859ed088a9448ff98bae8fa4e203cedb0"
+    },
+    {
+      "file": "prediksi-cell-16-output-04.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 16,
+      "output_index": 4,
+      "sha256": "b7551978bbc98b04c774d704f786e93f6d1913bb38b445bf6e3b348b20e4e75b"
+    },
+    {
+      "file": "prediksi-cell-16-output-05.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 16,
+      "output_index": 5,
+      "sha256": "f52e0f7507a470eaf3a3479376059fd1ea5a64fe73366b8858680c32fb37ff9c"
+    },
+    {
+      "file": "prediksi-cell-18-output-02.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 18,
+      "output_index": 2,
+      "sha256": "cb5e35bd4a25438785a85519a2237f924949d1d82b4e2c5bc8373e799eaf0931"
+    },
+    {
+      "file": "prediksi-cell-18-output-03.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 18,
+      "output_index": 3,
+      "sha256": "ceca8cc57a568e6e31178a75f97cdb3859ed088a9448ff98bae8fa4e203cedb0"
+    },
+    {
+      "file": "prediksi-cell-18-output-04.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 18,
+      "output_index": 4,
+      "sha256": "907fcc8e7a31d42f3b5c253d22bd470136f5467804545594978cf3a6fe0b1b03"
+    },
+    {
+      "file": "prediksi-cell-18-output-05.png",
+      "notebook": "prediksi.ipynb",
+      "cell_index": 18,
+      "output_index": 5,
+      "sha256": "c37aa9648a926219fa34f0d552b347fbb52e3669b4413afc0f29920e5bab7f7c"
+    }
+  ]
+}

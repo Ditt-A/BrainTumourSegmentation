@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Brain Tumour · Asset Library</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #172d38;
+        --teal: #248b8b;
+        --paper: #f4f7f6;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        font:
+          15px/1.65 "Segoe UI",
+          Arial,
+          sans-serif;
+        background: var(--paper);
+      }
+      a {
+        color: inherit;
+      }
+      a:focus-visible {
+        outline: 3px solid var(--teal);
+        outline-offset: 5px;
+      }
+      .container {
+        width: min(1240px, calc(100% - 64px));
+        margin: auto;
+      }
+      .topbar {
+        border-bottom: 1px solid #dce5e2;
+        padding: 22px 0;
+      }
+      .topbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+      }
+      .wordmark {
+        font-size: 14px;
+        font-weight: 650;
+        letter-spacing: -0.3px;
+      }
+      .wordmark span {
+        color: var(--teal);
+      }
+      nav {
+        display: flex;
+        gap: 24px;
+        font-size: 12px;
+      }
+      nav a {
+        text-decoration: none;
+      }
+      header {
+        padding: 76px 0 54px;
+      }
+      .eyebrow {
+        font:
+          10px/1.5 Consolas,
+          monospace;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        color: var(--teal);
+        margin: 0 0 16px;
+      }
+      h1 {
+        font-weight: 550;
+        font-size: clamp(36px, 5vw, 64px);
+        line-height: 1.08;
+        letter-spacing: -2.8px;
+        margin: 0 0 22px;
+        max-width: 840px;
+      }
+      header p:last-child {
+        max-width: 660px;
+        color: #657b84;
+        margin: 0;
+      }
+      .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 24px;
+        margin: 0 0 26px;
+      }
+      h2 {
+        font-size: 28px;
+        font-weight: 550;
+        letter-spacing: -1px;
+        margin: 0;
+      }
+      .section-title p {
+        font-size: 12px;
+        color: #6d8187;
+        margin: 0;
+        max-width: 440px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+      .card {
+        background: white;
+        border: 1px solid #dce5e2;
+        border-radius: 12px;
+        overflow: hidden;
+        min-width: 0;
+        transition:
+          box-shadow 0.25s,
+          border-color 0.25s;
+      }
+      .card:hover {
+        box-shadow: 0 12px 30px #172d380a;
+        border-color: #9dbeb8;
+      }
+      .media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1.5;
+        background: #e8efec;
+        position: relative;
+        overflow: hidden;
+      }
+      .media > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        position: absolute;
+        inset: 0;
+      }
+      .media.photo > img {
+        object-fit: cover;
+      }
+      .media .tag {
+        position: absolute;
+        z-index: 2;
+        left: 14px;
+        top: 14px;
+        background: #ffffffdc;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        padding: 3px 7px;
+        color: #54716e;
+        font:
+          9px/1.5 Consolas,
+          monospace;
+      }
+      .media.cutout > img {
+        padding: 12px;
+      }
+      .caption {
+        padding: 20px 21px 22px;
+      }
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.4;
+        letter-spacing: -0.45px;
+        margin: 0 0 6px;
+      }
+      .caption p {
+        font-size: 12px;
+        color: #6d8187;
+        margin: 0 0 12px;
+      }
+      .file {
+        display: block;
+        font:
+          10px/1.5 Consolas,
+          monospace;
+        color: #82938e;
+        overflow-wrap: anywhere;
+        text-decoration: none;
+      }
+      .file:hover {
+        color: var(--teal);
+      }
+      section {
+        padding: 26px 0 70px;
+        scroll-margin-top: 28px;
+      }
+      .note {
+        margin-top: 26px;
+        border-left: 2px solid #91b4ac;
+        padding: 2px 0 2px 16px;
+        font-size: 12px;
+        color: #6d8187;
+        max-width: 850px;
+      }
+      .data-section {
+        border-top: 1px solid #dce5e2;
+        padding-top: 58px;
+      }
+      .data-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+      .scan {
+        background: #0f1b20;
+        aspect-ratio: 1.15;
+      }
+      .scan > img {
+        object-fit: contain !important;
+        padding: 14px;
+      }
+      .data-grid .caption {
+        padding: 17px;
+      }
+      .data-grid h3 {
+        font-size: 14px;
+        letter-spacing: -0.2px;
+      }
+      .data-grid .caption p {
+        font-size: 11px;
+      }
+      .data-grid .tag {
+        background: #203038dd;
+        border-color: #344b55;
+        color: #c9d9d8;
+      }
+      .data-grid .file {
+        font-size: 9px;
+      }
+      footer {
+        padding: 30px 0 38px;
+        border-top: 1px solid #dce5e2;
+        font-size: 11px;
+        color: #71877f;
+      }
+      footer .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+      }
+      @media (max-width: 960px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .data-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .section-title {
+          align-items: start;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+      @media (max-width: 600px) {
+        .container {
+          width: calc(100% - 36px);
+        }
+        .topbar .container {
+          align-items: start;
+          flex-direction: column;
+          gap: 12px;
+        }
+        header {
+          padding: 46px 0 34px;
+        }
+        h1 {
+          letter-spacing: -1.5px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+        .data-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 12px;
+        }
+        .data-grid .caption {
+          padding: 12px;
+        }
+        .data-grid h3 {
+          font-size: 12px;
+        }
+        .data-grid .media .tag {
+          left: 8px;
+          top: 8px;
+          font-size: 7px;
+        }
+        .data-grid .file {
+          font-size: 8px;
+        }
+        .scan > img {
+          padding: 8px;
+        }
+        .section-title h2 {
+          font-size: 25px;
+        }
+        footer .container {
+          flex-direction: column;
+          gap: 5px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        * {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container">
+        <div class="wordmark">Brain tumour <span>/ asset library</span></div>
+        <nav aria-label="Bagian aset">
+          <a href="#editorial">Visual pendukung</a
+          ><a href="#dataset">MRI &amp; mask</a>
+        </nav>
+      </div>
+    </div>
+    <header class="container">
+      <p class="eyebrow">19 ASSETS / PREPARED FOR THE WEB</p>
+      <h1>Brain tumour segmentation.</h1>
+      <p>
+        Enam visual pendukung dan tiga belas aset MRI beserta anotasinya. Klik
+        nama file untuk membuka setiap gambar secara terpisah.
+      </p>
+    </header>
+    <main>
+      <section class="container" id="editorial">
+        <div class="section-title">
+          <h2>Visual pendukung <span style="color: #8ca29a">/ 06</span></h2>
+          <p>
+            Ilustrasi editorial untuk hero, konteks pemeriksaan, kolaborasi, dan
+            penutup halaman.
+          </p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="media cutout">
+              <span class="tag">TRANSPARAN</span
+              ><img
+                src="images/editorial/01-brain-sculpture.webp"
+                width="1254"
+                height="1254"
+                alt="Ilustrasi otak kaca buram dengan latar transparan."
+              />
+            </div>
+            <div class="caption">
+              <h3>Sculpture otak</h3>
+              <p>Hero, transparan</p>
+              <a class="file" href="images/editorial/01-brain-sculpture.webp"
+                >01-brain-sculpture.webp<br />1254 × 1254 · 1116 KB</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media photo">
+              <span class="tag">EDITORIAL</span
+              ><img
+                src="images/editorial/02-mri-room.webp"
+                width="1536"
+                height="1024"
+                alt="Ilustrasi fotografis ruang MRI tanpa pasien."
+              />
+            </div>
+            <div class="caption">
+              <h3>Ruang MRI</h3>
+              <p>Konteks pemeriksaan</p>
+              <a class="file" href="images/editorial/02-mri-room.webp"
+                >02-mri-room.webp<br />1536 × 1024 · 94 KB</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media cutout">
+              <span class="tag">TRANSPARAN</span
+              ><img
+                src="images/editorial/03-radiologist.webp"
+                width="1122"
+                height="1402"
+                alt="Sosok radiolog fiktif memegang tablet, berlatar transparan."
+              />
+            </div>
+            <div class="caption">
+              <h3>Radiolog</h3>
+              <p>Bagian manfaat atau CTA, transparan</p>
+              <a class="file" href="images/editorial/03-radiologist.webp"
+                >03-radiologist.webp<br />1122 × 1402 · 783 KB</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media photo">
+              <span class="tag">EDITORIAL</span
+              ><img
+                src="images/editorial/04-case-review.webp"
+                width="1536"
+                height="1024"
+                alt="Dua tenaga medis fiktif mendiskusikan citra pada workstation."
+              />
+            </div>
+            <div class="caption">
+              <h3>Peninjauan citra</h3>
+              <p>Kolaborasi dan peninjauan</p>
+              <a class="file" href="images/editorial/04-case-review.webp"
+                >04-case-review.webp<br />1536 × 1024 · 104 KB</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media cutout">
+              <span class="tag">TRANSPARAN</span
+              ><img
+                src="images/editorial/05-head-coil.webp"
+                width="1254"
+                height="1254"
+                alt="Ilustrasi peralatan head coil MRI dengan latar transparan."
+              />
+            </div>
+            <div class="caption">
+              <h3>Perangkat head coil</h3>
+              <p>Detail pemeriksaan, transparan</p>
+              <a class="file" href="images/editorial/05-head-coil.webp"
+                >05-head-coil.webp<br />1254 × 1254 · 685 KB</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media photo">
+              <span class="tag">EDITORIAL</span
+              ><img
+                src="images/editorial/06-imaging-desk.webp"
+                width="1536"
+                height="1024"
+                alt="Meja kerja peninjauan citra dengan film yang diburamkan."
+              />
+            </div>
+            <div class="caption">
+              <h3>Meja peninjauan</h3>
+              <p>Penutup atau bagian dokumentasi</p>
+              <a class="file" href="images/editorial/06-imaging-desk.webp"
+                >06-imaging-desk.webp<br />1536 × 1024 · 81 KB</a
+              >
+            </div>
+          </article>
+        </div>
+        <p class="note">
+          Visual pendukung dibuat dengan image_gen. Sosok, fasilitas, dan
+          peralatan bersifat ilustratif; gambar pada bagian ini bukan data
+          penelitian atau hasil prediksi.
+        </p>
+      </section>
+      <section class="container data-section" id="dataset">
+        <div class="section-title">
+          <h2>
+            MRI &amp; anotasi dataset <span style="color: #8ca29a">/ 13</span>
+          </h2>
+          <p>
+            FeTS21_Training_001 · T1, T1ce, T2, FLAIR<br />Sumber NIfTI dan mask
+            referensi dari repository.
+          </p>
+        </div>
+        <div class="grid data-grid">
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MRI ASLI</span
+              ><img
+                src="images/dataset/axial-flair.webp"
+                width="240"
+                height="240"
+                alt="axial FLAIR"
+              />
+            </div>
+            <div class="caption">
+              <h3>axial FLAIR</h3>
+              <p>axial · slice 67 · 240 × 240</p>
+              <a class="file" href="images/dataset/axial-flair.webp"
+                >axial-flair.webp</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MRI ASLI</span
+              ><img
+                src="images/dataset/axial-t1.webp"
+                width="240"
+                height="240"
+                alt="axial T1"
+              />
+            </div>
+            <div class="caption">
+              <h3>axial T1</h3>
+              <p>axial · slice 67 · 240 × 240</p>
+              <a class="file" href="images/dataset/axial-t1.webp"
+                >axial-t1.webp</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MRI ASLI</span
+              ><img
+                src="images/dataset/axial-t1ce.webp"
+                width="240"
+                height="240"
+                alt="axial T1ce"
+              />
+            </div>
+            <div class="caption">
+              <h3>axial T1ce</h3>
+              <p>axial · slice 67 · 240 × 240</p>
+              <a class="file" href="images/dataset/axial-t1ce.webp"
+                >axial-t1ce.webp</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MRI ASLI</span
+              ><img
+                src="images/dataset/axial-t2.webp"
+                width="240"
+                height="240"
+                alt="axial T2"
+              />
+            </div>
+            <div class="caption">
+              <h3>axial T2</h3>
+              <p>axial · slice 67 · 240 × 240</p>
+              <a class="file" href="images/dataset/axial-t2.webp"
+                >axial-t2.webp</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MASK REFERENSI</span
+              ><img
+                src="images/dataset/axial-flair-reference-overlay.webp"
+                width="240"
+                height="240"
+                alt="axial FLAIR reference overlay"
+              />
+            </div>
+            <div class="caption">
+              <h3>axial FLAIR reference overlay</h3>
+              <p>axial · slice 67 · 240 × 240</p>
+              <a
+                class="file"
+                href="images/dataset/axial-flair-reference-overlay.webp"
+                >axial-flair-reference-overlay.webp</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MASK REFERENSI</span
+              ><img
+                src="images/dataset/axial-flair.webp"
+                width="240"
+                height="240"
+                alt=""
+              /><img
+                src="images/dataset/axial-reference-labels.webp"
+                width="240"
+                height="240"
+                alt="axial reference labels"
+              />
+            </div>
+            <div class="caption">
+              <h3>axial reference labels</h3>
+              <p>axial · slice 67 · 240 × 240</p>
+              <a class="file" href="images/dataset/axial-reference-labels.webp"
+                >axial-reference-labels.webp</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MASK REFERENSI</span
+              ><img
+                src="images/dataset/axial-flair.webp"
+                width="240"
+                height="240"
+                alt=""
+              /><img
+                src="images/dataset/axial-reference-et.webp"
+                width="240"
+                height="240"
+                alt="axial reference et"
+              />
+            </div>
+            <div class="caption">
+              <h3>axial reference et</h3>
+              <p>axial · slice 67 · 240 × 240</p>
+              <a class="file" href="images/dataset/axial-reference-et.webp"
+                >axial-reference-et.webp</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MASK REFERENSI</span
+              ><img
+                src="images/dataset/axial-flair.webp"
+                width="240"
+                height="240"
+                alt=""
+              /><img
+                src="images/dataset/axial-reference-tc.webp"
+                width="240"
+                height="240"
+                alt="axial reference tc"
+              />
+            </div>
+            <div class="caption">
+              <h3>axial reference tc</h3>
+              <p>axial · slice 67 · 240 × 240</p>
+              <a class="file" href="images/dataset/axial-reference-tc.webp"
+                >axial-reference-tc.webp</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MASK REFERENSI</span
+              ><img
+                src="images/dataset/axial-flair.webp"
+                width="240"
+                height="240"
+                alt=""
+              /><img
+                src="images/dataset/axial-reference-wt.webp"
+                width="240"
+                height="240"
+                alt="axial reference wt"
+              />
+            </div>
+            <div class="caption">
+              <h3>axial reference wt</h3>
+              <p>axial · slice 67 · 240 × 240</p>
+              <a class="file" href="images/dataset/axial-reference-wt.webp"
+                >axial-reference-wt.webp</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MRI ASLI</span
+              ><img
+                src="images/dataset/coronal-flair.webp"
+                width="240"
+                height="155"
+                alt="coronal FLAIR"
+              />
+            </div>
+            <div class="caption">
+              <h3>coronal FLAIR</h3>
+              <p>coronal · slice 125 · 240 × 155</p>
+              <a class="file" href="images/dataset/coronal-flair.webp"
+                >coronal-flair.webp</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MASK REFERENSI</span
+              ><img
+                src="images/dataset/coronal-flair-reference-overlay.webp"
+                width="240"
+                height="155"
+                alt="coronal FLAIR reference overlay"
+              />
+            </div>
+            <div class="caption">
+              <h3>coronal FLAIR reference overlay</h3>
+              <p>coronal · slice 125 · 240 × 155</p>
+              <a
+                class="file"
+                href="images/dataset/coronal-flair-reference-overlay.webp"
+                >coronal-flair-reference-overlay.webp</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MRI ASLI</span
+              ><img
+                src="images/dataset/sagittal-flair.webp"
+                width="240"
+                height="155"
+                alt="sagittal FLAIR"
+              />
+            </div>
+            <div class="caption">
+              <h3>sagittal FLAIR</h3>
+              <p>sagittal · slice 144 · 240 × 155</p>
+              <a class="file" href="images/dataset/sagittal-flair.webp"
+                >sagittal-flair.webp</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="media scan">
+              <span class="tag">MASK REFERENSI</span
+              ><img
+                src="images/dataset/sagittal-flair-reference-overlay.webp"
+                width="240"
+                height="155"
+                alt="sagittal FLAIR reference overlay"
+              />
+            </div>
+            <div class="caption">
+              <h3>sagittal FLAIR reference overlay</h3>
+              <p>sagittal · slice 144 · 240 × 155</p>
+              <a
+                class="file"
+                href="images/dataset/sagittal-flair-reference-overlay.webp"
+                >sagittal-flair-reference-overlay.webp</a
+              >
+            </div>
+          </article>
+        </div>
+        <p class="note">
+          Overlay dan lapisan ET/TC/WT berasal dari mask referensi dataset.
+          Tidak ada model yang dimuat atau inferensi baru yang dijalankan untuk
+          ekspor ini. Gambar mempertahankan rasio dan resolusi voxel aslinya.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <span>Brain Tumour Segmentation · Asset handoff</span
+        ><span
+          >PNG originals · WebP exports · Prompts · Provenance manifests</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

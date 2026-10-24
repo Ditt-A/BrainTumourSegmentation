@@ -1,0 +1,29 @@
+# Local environments and credentials
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+kaggle.json
+
+# Research inputs and runtime outputs
+/data/raw/
+/models/checkpoints/
+/outputs/
+/runs/
+/logs/
+*.pt
+*.ckpt
+*.zip
+
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Future web tooling
+node_modules/
+dist/
+test-results/
+playwright-report/

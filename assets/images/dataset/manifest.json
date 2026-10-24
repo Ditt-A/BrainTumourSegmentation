@@ -1,0 +1,518 @@
+{
+  "case_id": "FeTS21_Training_001",
+  "source_commit": "6a8b6e9a701926256e670feee97f8ec988feef4f",
+  "source_kind": "Checked-in MRI volumes and dataset reference mask; no inference.",
+  "processing": {
+    "orientation": "Closest canonical RAS+ using voxel permutation/flips, no resampling.",
+    "display": "Neurological convention: +X right; anterior at top of axial, superior at top of coronal/sagittal.",
+    "slice_selection": "Maximum reference-mask voxel count independently per anatomical axis.",
+    "intensity_window": "Per-modality 1st/99th percentile of positive finite voxels; clipped to uint8.",
+    "windows": {
+      "flair": [
+        51.0,
+        376.0
+      ],
+      "t1": [
+        139.0,
+        508.0
+      ],
+      "t1ce": [
+        161.0,
+        778.0
+      ],
+      "t2": [
+        52.0,
+        261.0
+      ]
+    },
+    "resizing": "None; native voxel-grid pixels. Voxel spacing is recorded by affine.",
+    "output": "Lossless WebP; decoded pixel equality checked against rendered arrays.",
+    "reference_overlay_opacity": 0.52
+  },
+  "reference_labels": {
+    "1": {
+      "name": "Necrotic/non-enhancing tumor core",
+      "rgb": [
+        216,
+        177,
+        107
+      ]
+    },
+    "2": {
+      "name": "Peritumoral edema",
+      "rgb": [
+        72,
+        168,
+        168
+      ]
+    },
+    "4": {
+      "name": "Enhancing tumor",
+      "rgb": [
+        224,
+        128,
+        90
+      ]
+    }
+  },
+  "regions": {
+    "ET": [
+      4
+    ],
+    "TC": [
+      1,
+      4
+    ],
+    "WT": [
+      1,
+      2,
+      4
+    ]
+  },
+  "slices": {
+    "axial": 67,
+    "coronal": 125,
+    "sagittal": 144
+  },
+  "sources": [
+    {
+      "file": "FeTS21_Training_001_flair.nii",
+      "repository_path": "data/samples/FeTS21_Training_001/FeTS21_Training_001_flair.nii",
+      "sha256": "1671dfab75fbaaede29989011cabcef12b7825c72a315f293441b698a8e8d39c",
+      "original_shape": [
+        240,
+        240,
+        155
+      ],
+      "original_axis_codes": [
+        "L",
+        "P",
+        "S"
+      ],
+      "canonical_axis_codes": [
+        "R",
+        "A",
+        "S"
+      ],
+      "canonical_affine": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -239.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "file": "FeTS21_Training_001_t1.nii",
+      "repository_path": "data/samples/FeTS21_Training_001/FeTS21_Training_001_t1.nii",
+      "sha256": "6440b711f433a7071379088fc61ad9e0ff01ae5f551a7e5f006135c5adcf0f83",
+      "original_shape": [
+        240,
+        240,
+        155
+      ],
+      "original_axis_codes": [
+        "L",
+        "P",
+        "S"
+      ],
+      "canonical_axis_codes": [
+        "R",
+        "A",
+        "S"
+      ],
+      "canonical_affine": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -239.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "file": "FeTS21_Training_001_t1ce.nii",
+      "repository_path": "data/samples/FeTS21_Training_001/FeTS21_Training_001_t1ce.nii",
+      "sha256": "ed3732f26987226748147562cc64e58958564a6a7e47611b726773fd4e057b99",
+      "original_shape": [
+        240,
+        240,
+        155
+      ],
+      "original_axis_codes": [
+        "L",
+        "P",
+        "S"
+      ],
+      "canonical_axis_codes": [
+        "R",
+        "A",
+        "S"
+      ],
+      "canonical_affine": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -239.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "file": "FeTS21_Training_001_t2.nii",
+      "repository_path": "data/samples/FeTS21_Training_001/FeTS21_Training_001_t2.nii",
+      "sha256": "0918a2aed1e8aac1a802bf899940f9032b0e61bae70b35c9fa93d35e7e27c569",
+      "original_shape": [
+        240,
+        240,
+        155
+      ],
+      "original_axis_codes": [
+        "L",
+        "P",
+        "S"
+      ],
+      "canonical_axis_codes": [
+        "R",
+        "A",
+        "S"
+      ],
+      "canonical_affine": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -239.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "file": "FeTS21_Training_001_seg.nii",
+      "repository_path": "data/samples/FeTS21_Training_001/FeTS21_Training_001_seg.nii",
+      "sha256": "56f39a503ebc4df200a5b9872b1ace83d92fa775d55b6ce301f12d2f63507180",
+      "original_shape": [
+        240,
+        240,
+        155
+      ],
+      "original_axis_codes": [
+        "L",
+        "P",
+        "S"
+      ],
+      "canonical_axis_codes": [
+        "R",
+        "A",
+        "S"
+      ],
+      "canonical_affine": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -239.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "axial-flair",
+      "file": "axial-flair.webp",
+      "width": 240,
+      "height": 240,
+      "mode": "L",
+      "plane": "axial",
+      "slice_index_canonical": 67,
+      "modality": "flair",
+      "kind": "source_mri",
+      "labels": [],
+      "sha256": "fad8bedec2d1e2eacc5a04efc0cb1e06b3e1d04b9ebdf9abeb17547fe71853a0",
+      "bytes": 12712
+    },
+    {
+      "id": "axial-t1",
+      "file": "axial-t1.webp",
+      "width": 240,
+      "height": 240,
+      "mode": "L",
+      "plane": "axial",
+      "slice_index_canonical": 67,
+      "modality": "t1",
+      "kind": "source_mri",
+      "labels": [],
+      "sha256": "07036f1cc6d7ef57a59b46db7c595fdf406c8f04566f7f2d1171a809a7e89d59",
+      "bytes": 12518
+    },
+    {
+      "id": "axial-t1ce",
+      "file": "axial-t1ce.webp",
+      "width": 240,
+      "height": 240,
+      "mode": "L",
+      "plane": "axial",
+      "slice_index_canonical": 67,
+      "modality": "t1ce",
+      "kind": "source_mri",
+      "labels": [],
+      "sha256": "a4014471b04e7b35533d3206e38541ce6d5212ecbaa27859351b6a18f5d144c6",
+      "bytes": 16292
+    },
+    {
+      "id": "axial-t2",
+      "file": "axial-t2.webp",
+      "width": 240,
+      "height": 240,
+      "mode": "L",
+      "plane": "axial",
+      "slice_index_canonical": 67,
+      "modality": "t2",
+      "kind": "source_mri",
+      "labels": [],
+      "sha256": "4c746ed1848b9c57a663ef429607f28dd19dcda99f9a479dc95f358760c0bdc1",
+      "bytes": 12126
+    },
+    {
+      "id": "axial-flair-reference-overlay",
+      "file": "axial-flair-reference-overlay.webp",
+      "width": 240,
+      "height": 240,
+      "mode": "RGB",
+      "plane": "axial",
+      "slice_index_canonical": 67,
+      "modality": "flair",
+      "kind": "reference_mask_overlay",
+      "labels": [
+        1,
+        2,
+        4
+      ],
+      "sha256": "f16acf3bf9ee5ad28ccf40de871a716e4dd43409090d28cc789bc4fa598ecc79",
+      "bytes": 14784
+    },
+    {
+      "id": "axial-reference-labels",
+      "file": "axial-reference-labels.webp",
+      "width": 240,
+      "height": 240,
+      "mode": "RGBA",
+      "plane": "axial",
+      "slice_index_canonical": 67,
+      "modality": "seg",
+      "kind": "reference_mask",
+      "labels": [
+        1,
+        2,
+        4
+      ],
+      "sha256": "6bc9bba86830948345b58b46b5c58d6ccab0567f05ef8720f5ff29cc8ed6d2f4",
+      "bytes": 644
+    },
+    {
+      "id": "axial-reference-et",
+      "file": "axial-reference-et.webp",
+      "width": 240,
+      "height": 240,
+      "mode": "RGBA",
+      "plane": "axial",
+      "slice_index_canonical": 67,
+      "modality": "seg",
+      "kind": "reference_region_layer",
+      "labels": [
+        4
+      ],
+      "sha256": "5f0457b89c7619e6678bbd2a1b1f37b6c8b880a69a1540315abe714796799f89",
+      "bytes": 264
+    },
+    {
+      "id": "axial-reference-tc",
+      "file": "axial-reference-tc.webp",
+      "width": 240,
+      "height": 240,
+      "mode": "RGBA",
+      "plane": "axial",
+      "slice_index_canonical": 67,
+      "modality": "seg",
+      "kind": "reference_region_layer",
+      "labels": [
+        1,
+        4
+      ],
+      "sha256": "67c1c3dd25add8ce0f675048bfc8458204403f3a762757c1d900822db17a19c4",
+      "bytes": 180
+    },
+    {
+      "id": "axial-reference-wt",
+      "file": "axial-reference-wt.webp",
+      "width": 240,
+      "height": 240,
+      "mode": "RGBA",
+      "plane": "axial",
+      "slice_index_canonical": 67,
+      "modality": "seg",
+      "kind": "reference_region_layer",
+      "labels": [
+        1,
+        2,
+        4
+      ],
+      "sha256": "6f1745c20d36acaa52c8f2458fc4e16e8244416637ff57f24b47dc65f538203e",
+      "bytes": 370
+    },
+    {
+      "id": "coronal-flair",
+      "file": "coronal-flair.webp",
+      "width": 240,
+      "height": 155,
+      "mode": "L",
+      "plane": "coronal",
+      "slice_index_canonical": 125,
+      "modality": "flair",
+      "kind": "source_mri",
+      "labels": [],
+      "sha256": "308dc689bf054253dc443256c70911f31f571a04d57113b27e6720b41bc4d332",
+      "bytes": 7480
+    },
+    {
+      "id": "coronal-flair-reference-overlay",
+      "file": "coronal-flair-reference-overlay.webp",
+      "width": 240,
+      "height": 155,
+      "mode": "RGB",
+      "plane": "coronal",
+      "slice_index_canonical": 125,
+      "modality": "flair",
+      "kind": "reference_mask_overlay",
+      "labels": [
+        1,
+        2,
+        4
+      ],
+      "sha256": "22db441b0a1e793f1c4c5c84b3bb084f51052f135fa4f1ad3a9cb6ea9c392ecf",
+      "bytes": 9560
+    },
+    {
+      "id": "sagittal-flair",
+      "file": "sagittal-flair.webp",
+      "width": 240,
+      "height": 155,
+      "mode": "L",
+      "plane": "sagittal",
+      "slice_index_canonical": 144,
+      "modality": "flair",
+      "kind": "source_mri",
+      "labels": [],
+      "sha256": "297f20ca0f06841d25edfed2ae61da56af6d743d4be8b1392d612db995c42174",
+      "bytes": 8414
+    },
+    {
+      "id": "sagittal-flair-reference-overlay",
+      "file": "sagittal-flair-reference-overlay.webp",
+      "width": 240,
+      "height": 155,
+      "mode": "RGB",
+      "plane": "sagittal",
+      "slice_index_canonical": 144,
+      "modality": "flair",
+      "kind": "reference_mask_overlay",
+      "labels": [
+        1,
+        2,
+        4
+      ],
+      "sha256": "d5de9e4b32e1a700021b6cadf9d88067cb79d62bd3c592fb247855291057e75f",
+      "bytes": 10196
+    }
+  ]
+}
